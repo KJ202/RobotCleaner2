@@ -258,6 +258,33 @@ src/qlearning.cpp.s:
 	$(MAKE) -f CMakeFiles/robot_cleaner2.dir/build.make CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.s
 .PHONY : src/qlearning.cpp.s
 
+src/qlearningLinearApprox.o: src/qlearningLinearApprox.cpp.o
+
+.PHONY : src/qlearningLinearApprox.o
+
+# target to build an object file
+src/qlearningLinearApprox.cpp.o:
+	$(MAKE) -f CMakeFiles/robot_cleaner2.dir/build.make CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o
+.PHONY : src/qlearningLinearApprox.cpp.o
+
+src/qlearningLinearApprox.i: src/qlearningLinearApprox.cpp.i
+
+.PHONY : src/qlearningLinearApprox.i
+
+# target to preprocess a source file
+src/qlearningLinearApprox.cpp.i:
+	$(MAKE) -f CMakeFiles/robot_cleaner2.dir/build.make CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.i
+.PHONY : src/qlearningLinearApprox.cpp.i
+
+src/qlearningLinearApprox.s: src/qlearningLinearApprox.cpp.s
+
+.PHONY : src/qlearningLinearApprox.s
+
+# target to generate assembly for a file
+src/qlearningLinearApprox.cpp.s:
+	$(MAKE) -f CMakeFiles/robot_cleaner2.dir/build.make CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.s
+.PHONY : src/qlearningLinearApprox.cpp.s
+
 src/state.o: src/state.cpp.o
 
 .PHONY : src/state.o
@@ -336,6 +363,9 @@ help:
 	@echo "... src/qlearning.o"
 	@echo "... src/qlearning.i"
 	@echo "... src/qlearning.s"
+	@echo "... src/qlearningLinearApprox.o"
+	@echo "... src/qlearningLinearApprox.i"
+	@echo "... src/qlearningLinearApprox.s"
 	@echo "... src/state.o"
 	@echo "... src/state.i"
 	@echo "... src/state.s"

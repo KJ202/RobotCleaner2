@@ -177,9 +177,33 @@ CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.o.provides: CMakeFiles/robot_cle
 CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.o.provides.build: CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.o
 
 
+CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o: CMakeFiles/robot_cleaner2.dir/flags.make
+CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o: src/qlearningLinearApprox.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lilinux/Documents/5TC/RobotCleaner2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o -c /home/lilinux/Documents/5TC/RobotCleaner2/src/qlearningLinearApprox.cpp
+
+CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lilinux/Documents/5TC/RobotCleaner2/src/qlearningLinearApprox.cpp > CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.i
+
+CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lilinux/Documents/5TC/RobotCleaner2/src/qlearningLinearApprox.cpp -o CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.s
+
+CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o.requires:
+
+.PHONY : CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o.requires
+
+CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o.provides: CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o.requires
+	$(MAKE) -f CMakeFiles/robot_cleaner2.dir/build.make CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o.provides.build
+.PHONY : CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o.provides
+
+CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o.provides.build: CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o
+
+
 CMakeFiles/robot_cleaner2.dir/src/state.cpp.o: CMakeFiles/robot_cleaner2.dir/flags.make
 CMakeFiles/robot_cleaner2.dir/src/state.cpp.o: src/state.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lilinux/Documents/5TC/RobotCleaner2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/robot_cleaner2.dir/src/state.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lilinux/Documents/5TC/RobotCleaner2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/robot_cleaner2.dir/src/state.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_cleaner2.dir/src/state.cpp.o -c /home/lilinux/Documents/5TC/RobotCleaner2/src/state.cpp
 
 CMakeFiles/robot_cleaner2.dir/src/state.cpp.i: cmake_force
@@ -203,7 +227,7 @@ CMakeFiles/robot_cleaner2.dir/src/state.cpp.o.provides.build: CMakeFiles/robot_c
 
 CMakeFiles/robot_cleaner2.dir/src/world.cpp.o: CMakeFiles/robot_cleaner2.dir/flags.make
 CMakeFiles/robot_cleaner2.dir/src/world.cpp.o: src/world.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lilinux/Documents/5TC/RobotCleaner2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/robot_cleaner2.dir/src/world.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lilinux/Documents/5TC/RobotCleaner2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/robot_cleaner2.dir/src/world.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_cleaner2.dir/src/world.cpp.o -c /home/lilinux/Documents/5TC/RobotCleaner2/src/world.cpp
 
 CMakeFiles/robot_cleaner2.dir/src/world.cpp.i: cmake_force
@@ -232,6 +256,7 @@ robot_cleaner2_OBJECTS = \
 "CMakeFiles/robot_cleaner2.dir/src/main.cpp.o" \
 "CMakeFiles/robot_cleaner2.dir/src/montecarlo.cpp.o" \
 "CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.o" \
+"CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o" \
 "CMakeFiles/robot_cleaner2.dir/src/state.cpp.o" \
 "CMakeFiles/robot_cleaner2.dir/src/world.cpp.o"
 
@@ -243,11 +268,12 @@ robot_cleaner2: CMakeFiles/robot_cleaner2.dir/src/dp.cpp.o
 robot_cleaner2: CMakeFiles/robot_cleaner2.dir/src/main.cpp.o
 robot_cleaner2: CMakeFiles/robot_cleaner2.dir/src/montecarlo.cpp.o
 robot_cleaner2: CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.o
+robot_cleaner2: CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o
 robot_cleaner2: CMakeFiles/robot_cleaner2.dir/src/state.cpp.o
 robot_cleaner2: CMakeFiles/robot_cleaner2.dir/src/world.cpp.o
 robot_cleaner2: CMakeFiles/robot_cleaner2.dir/build.make
 robot_cleaner2: CMakeFiles/robot_cleaner2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lilinux/Documents/5TC/RobotCleaner2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable robot_cleaner2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lilinux/Documents/5TC/RobotCleaner2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable robot_cleaner2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/robot_cleaner2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -260,6 +286,7 @@ CMakeFiles/robot_cleaner2.dir/requires: CMakeFiles/robot_cleaner2.dir/src/dp.cpp
 CMakeFiles/robot_cleaner2.dir/requires: CMakeFiles/robot_cleaner2.dir/src/main.cpp.o.requires
 CMakeFiles/robot_cleaner2.dir/requires: CMakeFiles/robot_cleaner2.dir/src/montecarlo.cpp.o.requires
 CMakeFiles/robot_cleaner2.dir/requires: CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.o.requires
+CMakeFiles/robot_cleaner2.dir/requires: CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o.requires
 CMakeFiles/robot_cleaner2.dir/requires: CMakeFiles/robot_cleaner2.dir/src/state.cpp.o.requires
 CMakeFiles/robot_cleaner2.dir/requires: CMakeFiles/robot_cleaner2.dir/src/world.cpp.o.requires
 

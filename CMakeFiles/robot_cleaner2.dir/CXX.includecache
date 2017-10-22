@@ -44,6 +44,18 @@ unordered_map
 world.hpp
 /home/lilinux/Documents/5TC/RobotCleaner2/include/world.hpp
 
+/home/lilinux/Documents/5TC/RobotCleaner2/include/qlearningLinearApprox.hpp
+math.h
+-
+tuple
+-
+vector
+-
+unordered_map
+-
+world.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/world.hpp
+
 /home/lilinux/Documents/5TC/RobotCleaner2/include/state.hpp
 memory
 -
@@ -95,6 +107,8 @@ time.h
 /home/lilinux/Documents/5TC/RobotCleaner2/include/world.hpp
 ../include/qlearning.hpp
 /home/lilinux/Documents/5TC/RobotCleaner2/include/qlearning.hpp
+../include/qlearningLinearApprox.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/qlearningLinearApprox.hpp
 ../include/montecarlo.hpp
 /home/lilinux/Documents/5TC/RobotCleaner2/include/montecarlo.hpp
 
@@ -106,9 +120,15 @@ time.h
 ../include/qlearning.hpp
 /home/lilinux/Documents/5TC/RobotCleaner2/include/qlearning.hpp
 
+/home/lilinux/Documents/5TC/RobotCleaner2/src/qlearningLinearApprox.cpp
+../include/qlearningLinearApprox.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/qlearningLinearApprox.hpp
+
 /home/lilinux/Documents/5TC/RobotCleaner2/src/state.cpp
 ../include/state.hpp
 /home/lilinux/Documents/5TC/RobotCleaner2/include/state.hpp
+../include/world.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/world.hpp
 
 /home/lilinux/Documents/5TC/RobotCleaner2/src/world.cpp
 ../include/world.hpp

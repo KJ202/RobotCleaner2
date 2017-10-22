@@ -27,20 +27,22 @@
 namespace cleaner{
   class state{
   protected:
+    int NBF = 2;//nb features
     bool base;
-    size battery, pose;
+    size battery, pose,height,width;
     std::vector<bool> grid;
 
   public:
-      state(std::vector<bool> const, bool, size, size);
+      state(std::vector<bool> const, bool, size, size,size,size);
       ~state();
 
       std::vector<bool>const& getGrid() const;
       bool getBase() const;
       size getBattery() const;
       size getPose() const;
+      int getBaseDistance();
       // Return the matrix for a given state and action 
-      int** getFeatures(action a);
+      int** getFeatures(int);
 
       /*!
       * \fn std::ostream& operator<<(std::ostream&, const state&)

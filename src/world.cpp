@@ -37,7 +37,7 @@ namespace cleaner{
     do{
       for( pose=0; pose<width*height; ++pose )
         for( battery=0; battery<cbattery; ++battery ){
-          states.push_back( new state(grid, base==pose, battery, pose) );
+          states.push_back( new state(grid, base==pose, battery, pose, width, height) );
         }
     } while( (grid = this->next(width * height)).size() != 0 );
   }

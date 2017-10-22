@@ -23,7 +23,7 @@ add_executable(
         src/montecarlo.cpp
 
         src/qlearning.cpp
-
+	src/qlearningLinearApprox.cpp
         src/state.cpp
         
         src/world.cpp
@@ -32,6 +32,7 @@ add_executable(
         include/dp.hpp
         include/montecarlo.hpp
         include/qlearning.hpp
+        include/qlearningLinearApprox.hpp
         include/state.hpp
         include/types.hpp
         include/world.hpp

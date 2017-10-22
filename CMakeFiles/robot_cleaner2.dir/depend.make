@@ -14,6 +14,7 @@ CMakeFiles/robot_cleaner2.dir/src/main.cpp.o: include/action.hpp
 CMakeFiles/robot_cleaner2.dir/src/main.cpp.o: include/dp.hpp
 CMakeFiles/robot_cleaner2.dir/src/main.cpp.o: include/montecarlo.hpp
 CMakeFiles/robot_cleaner2.dir/src/main.cpp.o: include/qlearning.hpp
+CMakeFiles/robot_cleaner2.dir/src/main.cpp.o: include/qlearningLinearApprox.hpp
 CMakeFiles/robot_cleaner2.dir/src/main.cpp.o: include/state.hpp
 CMakeFiles/robot_cleaner2.dir/src/main.cpp.o: include/types.hpp
 CMakeFiles/robot_cleaner2.dir/src/main.cpp.o: include/world.hpp
@@ -33,9 +34,17 @@ CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.o: include/types.hpp
 CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.o: include/world.hpp
 CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.o: src/qlearning.cpp
 
+CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o: include/action.hpp
+CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o: include/qlearningLinearApprox.hpp
+CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o: include/state.hpp
+CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o: include/types.hpp
+CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o: include/world.hpp
+CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o: src/qlearningLinearApprox.cpp
+
 CMakeFiles/robot_cleaner2.dir/src/state.cpp.o: include/action.hpp
 CMakeFiles/robot_cleaner2.dir/src/state.cpp.o: include/state.hpp
 CMakeFiles/robot_cleaner2.dir/src/state.cpp.o: include/types.hpp
+CMakeFiles/robot_cleaner2.dir/src/state.cpp.o: include/world.hpp
 CMakeFiles/robot_cleaner2.dir/src/state.cpp.o: src/state.cpp
 
 CMakeFiles/robot_cleaner2.dir/src/world.cpp.o: include/action.hpp

@@ -15,6 +15,7 @@ CMakeFiles/robot_cleaner2.dir/src/main.cpp.o
  /home/lilinux/Documents/5TC/RobotCleaner2/include/dp.hpp
  /home/lilinux/Documents/5TC/RobotCleaner2/include/montecarlo.hpp
  /home/lilinux/Documents/5TC/RobotCleaner2/include/qlearning.hpp
+ /home/lilinux/Documents/5TC/RobotCleaner2/include/qlearningLinearApprox.hpp
  /home/lilinux/Documents/5TC/RobotCleaner2/include/state.hpp
  /home/lilinux/Documents/5TC/RobotCleaner2/include/types.hpp
  /home/lilinux/Documents/5TC/RobotCleaner2/include/world.hpp
@@ -33,10 +34,18 @@ CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.o
  /home/lilinux/Documents/5TC/RobotCleaner2/include/types.hpp
  /home/lilinux/Documents/5TC/RobotCleaner2/include/world.hpp
  /home/lilinux/Documents/5TC/RobotCleaner2/src/qlearning.cpp
+CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o
+ /home/lilinux/Documents/5TC/RobotCleaner2/include/action.hpp
+ /home/lilinux/Documents/5TC/RobotCleaner2/include/qlearningLinearApprox.hpp
+ /home/lilinux/Documents/5TC/RobotCleaner2/include/state.hpp
+ /home/lilinux/Documents/5TC/RobotCleaner2/include/types.hpp
+ /home/lilinux/Documents/5TC/RobotCleaner2/include/world.hpp
+ /home/lilinux/Documents/5TC/RobotCleaner2/src/qlearningLinearApprox.cpp
 CMakeFiles/robot_cleaner2.dir/src/state.cpp.o
  /home/lilinux/Documents/5TC/RobotCleaner2/include/action.hpp
  /home/lilinux/Documents/5TC/RobotCleaner2/include/state.hpp
  /home/lilinux/Documents/5TC/RobotCleaner2/include/types.hpp
+ /home/lilinux/Documents/5TC/RobotCleaner2/include/world.hpp
  /home/lilinux/Documents/5TC/RobotCleaner2/src/state.cpp
 CMakeFiles/robot_cleaner2.dir/src/world.cpp.o
  /home/lilinux/Documents/5TC/RobotCleaner2/include/action.hpp
