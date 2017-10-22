@@ -10,17 +10,17 @@ int main(){
   cleaner::world w(2,2,3);
   std::cout << w << std::endl;
 
-/*  cleaner::dp dp_solver(w, 0.001, 0.99);
+  /*cleaner::dp dp_solver(w, 0.001, 0.99);
   dp_solver.solve();
   std::cout << "dp_solver("<< *w.getState(0) << ") = " << dp_solver.getValueAt(0) << std::endl;*/
 
-  cleaner::montecarlo mc_solver(w, 0.1, 0.99, 100);
+ /* cleaner::montecarlo mc_solver(w, 0.1, 0.99, 100);
   mc_solver.solve();
-  std::cout << "mc_solver("<< *w.getState(0) << ") = " << mc_solver.getValueAt(0) << std::endl;
+  std::cout << "mc_solver("<< *w.getState(0) << ") = " << mc_solver.getValueAt(0) << std::endl;*/
 
-/*  cleaner::qlearning q_solver(w, 0.1, 0.1, 0.99, 1000);
+  cleaner::qlearning q_solver(w, 0.1, 0.1, 0.99, 1000);
   q_solver.solve();
-  std::cout << "q_solver("<< *w.getState(0) << ") = " << q_solver.getValueAt(0) << std::endl;*/
+  std::cout << "q_solver("<< *w.getState(0) << ") = " << q_solver.getValueAt(0) << std::endl;
 
   return 0;
 }
