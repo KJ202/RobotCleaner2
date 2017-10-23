@@ -33,7 +33,9 @@ namespace cleaner{
     double qlearningLinearApprox::getValueAt(int s){
       double value = MIN;
       for(int a=0; a<action::END; ++a){
-        value = std::max(value, this->qf[s][a]);
+      	std::vector<double> phiSA = w.getState(s)->getFeatures(a);
+      	double qfapprox = this->approxQf(phiSA);
+        value = std::max(value, qfapprox);//here
       } return value;
     }
 
@@ -44,9 +46,12 @@ namespace cleaner{
 
       if( rd > this->epsilon ) {
         for(int a=0; a<action::END; ++a){
-          if( value < this->qf[s][a] ){
+          std::vector<double> phiSA = w.getState(s)->getFeatures(a);
+          double qfapprox = this->approxQf(phiSA);
+          std::cout << qfapprox << std::endl;
+          if( value < qfapprox ){ //here
             agreedy = a;
-            value = this->qf[s][a];
+            value = qfapprox;
           }
         }
       }
@@ -58,40 +63,28 @@ namespace cleaner{
       return agreedy;
     }
     
-    double qlearningLinearApprox::approxQf(int** phisa){
+    double qlearningLinearApprox::approxQf(std::vector<double>const phisa){
     	double approx=0.0;
-    	for(int i = 0; i < this->NBF ;i++){
-	    	for (int j = 0; j < 7; ++j)
-	    	{
-	    		approx += phisa[i][j]*this->teta[i]; 	
-	    	}
-    	}
+    	approx = std::inner_product(phisa.begin(),phisa.end(),this->teta.begin(),0.0);
     	return approx;
     }
 
     void qlearningLinearApprox::backup(int s, int a, int ss, double r){
       int i;
-      int** phiSA = w.getState(s)->getFeatures(a);
+      std::vector<double> phiSA = w.getState(s)->getFeatures(a);
       double approxQfSS = this->getValueAt(ss);
-      for(i=0;i < this->NBF; ++i){
-      	this->teta[i] = this->teta[i] + this->learning_rate * (r + this->gamma * approxQfSS - this->qf[s][a])*phiSA[i][a];
-      	
+      double qfapprox = this->approxQf(phiSA); 
+      double tDiff = this->learning_rate * (r + this->gamma * approxQfSS - qfapprox);
+      
+      for(i=0;i < this->teta.size(); ++i){
+      	this->teta[i] = this->teta[i] + tDiff; 	
       }
-      this->qf[s][a] = this->approxQf(phiSA); //new value because teta has been updated
-      std::cout << this->qf[s][a] << std::endl;
+      
     }
 
     void qlearningLinearApprox::init(){
       /*init teta vector arbitrary*/
-      this->teta.assign(2,0.0);
-     
-     	/*init qf with qpprox value*/
-      for(int s=0; s<this->w.getNumStates(); ++s){
-        this->qf.emplace(s,  std::unordered_map<int, double>());
-        for(int a=0; a<action::END; ++a){
-          int** phiSA = w.getState(s)->getFeatures(a);
-          this->qf.at(s).emplace(a, this->approxQf(phiSA));
-        }
-      }
+      this->teta.assign(this->NBF*action::END,0.0);
+       
     }
 }

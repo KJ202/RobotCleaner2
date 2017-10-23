@@ -42,7 +42,7 @@ namespace cleaner{
       size getPose() const;
       int getBaseDistance();
       // Return the matrix for a given state and action 
-      int** getFeatures(int);
+      std::vector<double>const& getFeatures(int);
 
       /*!
       * \fn std::ostream& operator<<(std::ostream&, const state&)

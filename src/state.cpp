@@ -44,31 +44,19 @@ namespace cleaner{
 * for now on 2 features only 
 * battery level 
 * and distance to the base 
+* so the length of the vector is NBF*len(action) for now on its 14
+* 
 */
 
   
-  int** state::getFeatures(int a){
+  std::vector<double>const& state::getFeatures(int a){
 
-    int** features = new int*[this->NBF];
-    for(int i = 0; i < this->NBF; ++i)
-        features[i] = new int[7];
-
-
+    std::vector<double> features;
+    features.assign(this->NBF*action::END,0.0);
     
-    for (int j = 0; j < 7; ++j)
-    {
-        if (a == j)
-        {
-          features[0][j]= battery;
-          features[1][j]= this->getBaseDistance();          
-        }
-
-        else
-        {
-          features[0][j]= 0;
-          features[1][j]= 0;           
-        }  
-    }
+    features[a] = battery;
+    features[a+1] = this->getBaseDistance();
+    
 
     return features;
   }

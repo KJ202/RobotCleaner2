@@ -26,7 +26,7 @@ namespace cleaner{
     double MIN = -100000, MAX = 100000;
     int NBF = 2;//nb features
     double gamma, epsilon, learning_rate;
-    std::unordered_map<int, std::unordered_map<int, double>> qf;
+    //std::unordered_map<int, std::unordered_map<int, double>> qf;
     std::vector<double> teta;
 
     void backup(int /*current state*/, int /*action*/, int /*next state*/, double /*reward*/);
@@ -39,6 +39,6 @@ namespace cleaner{
     void solve();
     int greedy(int);
     double getValueAt(int);
-    double approxQf(int** );
+    double approxQf(std::vector<double>const );
   };
 }
