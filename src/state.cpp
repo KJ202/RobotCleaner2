@@ -56,7 +56,6 @@ namespace cleaner{
     
     features[a] = battery;
     features[a+1] = this->getBaseDistance();
-    
 
     return features;
   }
