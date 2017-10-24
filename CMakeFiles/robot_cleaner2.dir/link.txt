@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 /usr/bin/c++   -Wall -std=c++11  -rdynamic CMakeFiles/robot_cleaner2.dir/src/action.cpp.o CMakeFiles/robot_cleaner2.dir/src/dp.cpp.o CMakeFiles/robot_cleaner2.dir/src/main.cpp.o CMakeFiles/robot_cleaner2.dir/src/montecarlo.cpp.o CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.o CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o CMakeFiles/robot_cleaner2.dir/src/state.cpp.o CMakeFiles/robot_cleaner2.dir/src/world.cpp.o  -o robot_cleaner2 
+=======
+/Library/Developer/CommandLineTools/usr/bin/c++   -Wall -std=c++11 -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/robot_cleaner2.dir/src/action.cpp.o CMakeFiles/robot_cleaner2.dir/src/dp.cpp.o CMakeFiles/robot_cleaner2.dir/src/main.cpp.o CMakeFiles/robot_cleaner2.dir/src/montecarlo.cpp.o CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.o CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o CMakeFiles/robot_cleaner2.dir/src/state.cpp.o CMakeFiles/robot_cleaner2.dir/src/world.cpp.o  -o robot_cleaner2 
+>>>>>>> 3d154e312dfb2de4248c99e63cec3b6b0510a857

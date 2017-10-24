@@ -39,19 +39,26 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
+<<<<<<< HEAD
 CMAKE_COMMAND = /home/lilinux/Téléchargements/clion-2017.2.3/bin/cmake/bin/cmake
 
 # The command to remove a file.
 RM = /home/lilinux/Téléchargements/clion-2017.2.3/bin/cmake/bin/cmake -E remove -f
+=======
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/bin/cmake
+
+# The command to remove a file.
+RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
+>>>>>>> 3d154e312dfb2de4248c99e63cec3b6b0510a857
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lilinux/Documents/5TC/RobotCleaner2
+CMAKE_SOURCE_DIR = "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lilinux/Documents/5TC/RobotCleaner2
+CMAKE_BINARY_DIR = "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +66,11 @@ CMAKE_BINARY_DIR = /home/lilinux/Documents/5TC/RobotCleaner2
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+<<<<<<< HEAD
 	/home/lilinux/Téléchargements/clion-2017.2.3/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+=======
+	/Applications/CLion.app/Contents/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+>>>>>>> 3d154e312dfb2de4248c99e63cec3b6b0510a857
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +81,11 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+<<<<<<< HEAD
 	/home/lilinux/Téléchargements/clion-2017.2.3/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+=======
+	/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+>>>>>>> 3d154e312dfb2de4248c99e63cec3b6b0510a857
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +95,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lilinux/Documents/5TC/RobotCleaner2/CMakeFiles /home/lilinux/Documents/5TC/RobotCleaner2/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/CMakeFiles" "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lilinux/Documents/5TC/RobotCleaner2/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target

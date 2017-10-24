@@ -39,6 +39,6 @@ namespace cleaner{
     void solve();
     int greedy(int);
     double getValueAt(int);
-    double approxQf(std::vector<double>const );
+    double approxQf(std::vector<double>const&J );
   };
 }

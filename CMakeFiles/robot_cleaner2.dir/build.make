@@ -34,19 +34,26 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
+<<<<<<< HEAD
 CMAKE_COMMAND = /home/lilinux/Téléchargements/clion-2017.2.3/bin/cmake/bin/cmake
 
 # The command to remove a file.
 RM = /home/lilinux/Téléchargements/clion-2017.2.3/bin/cmake/bin/cmake -E remove -f
+=======
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/bin/cmake
+
+# The command to remove a file.
+RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
+>>>>>>> 3d154e312dfb2de4248c99e63cec3b6b0510a857
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lilinux/Documents/5TC/RobotCleaner2
+CMAKE_SOURCE_DIR = "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lilinux/Documents/5TC/RobotCleaner2
+CMAKE_BINARY_DIR = "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/robot_cleaner2.dir/depend.make
@@ -59,6 +66,7 @@ include CMakeFiles/robot_cleaner2.dir/flags.make
 
 CMakeFiles/robot_cleaner2.dir/src/action.cpp.o: CMakeFiles/robot_cleaner2.dir/flags.make
 CMakeFiles/robot_cleaner2.dir/src/action.cpp.o: src/action.cpp
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lilinux/Documents/5TC/RobotCleaner2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/robot_cleaner2.dir/src/action.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_cleaner2.dir/src/action.cpp.o -c /home/lilinux/Documents/5TC/RobotCleaner2/src/action.cpp
 
@@ -69,6 +77,18 @@ CMakeFiles/robot_cleaner2.dir/src/action.cpp.i: cmake_force
 CMakeFiles/robot_cleaner2.dir/src/action.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot_cleaner2.dir/src/action.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lilinux/Documents/5TC/RobotCleaner2/src/action.cpp -o CMakeFiles/robot_cleaner2.dir/src/action.cpp.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/robot_cleaner2.dir/src/action.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_cleaner2.dir/src/action.cpp.o -c "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/action.cpp"
+
+CMakeFiles/robot_cleaner2.dir/src/action.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robot_cleaner2.dir/src/action.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/action.cpp" > CMakeFiles/robot_cleaner2.dir/src/action.cpp.i
+
+CMakeFiles/robot_cleaner2.dir/src/action.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot_cleaner2.dir/src/action.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/action.cpp" -o CMakeFiles/robot_cleaner2.dir/src/action.cpp.s
+>>>>>>> 3d154e312dfb2de4248c99e63cec3b6b0510a857
 
 CMakeFiles/robot_cleaner2.dir/src/action.cpp.o.requires:
 
@@ -83,6 +103,7 @@ CMakeFiles/robot_cleaner2.dir/src/action.cpp.o.provides.build: CMakeFiles/robot_
 
 CMakeFiles/robot_cleaner2.dir/src/dp.cpp.o: CMakeFiles/robot_cleaner2.dir/flags.make
 CMakeFiles/robot_cleaner2.dir/src/dp.cpp.o: src/dp.cpp
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lilinux/Documents/5TC/RobotCleaner2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/robot_cleaner2.dir/src/dp.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_cleaner2.dir/src/dp.cpp.o -c /home/lilinux/Documents/5TC/RobotCleaner2/src/dp.cpp
 
@@ -93,6 +114,18 @@ CMakeFiles/robot_cleaner2.dir/src/dp.cpp.i: cmake_force
 CMakeFiles/robot_cleaner2.dir/src/dp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot_cleaner2.dir/src/dp.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lilinux/Documents/5TC/RobotCleaner2/src/dp.cpp -o CMakeFiles/robot_cleaner2.dir/src/dp.cpp.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/robot_cleaner2.dir/src/dp.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_cleaner2.dir/src/dp.cpp.o -c "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/dp.cpp"
+
+CMakeFiles/robot_cleaner2.dir/src/dp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robot_cleaner2.dir/src/dp.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/dp.cpp" > CMakeFiles/robot_cleaner2.dir/src/dp.cpp.i
+
+CMakeFiles/robot_cleaner2.dir/src/dp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot_cleaner2.dir/src/dp.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/dp.cpp" -o CMakeFiles/robot_cleaner2.dir/src/dp.cpp.s
+>>>>>>> 3d154e312dfb2de4248c99e63cec3b6b0510a857
 
 CMakeFiles/robot_cleaner2.dir/src/dp.cpp.o.requires:
 
@@ -107,6 +140,7 @@ CMakeFiles/robot_cleaner2.dir/src/dp.cpp.o.provides.build: CMakeFiles/robot_clea
 
 CMakeFiles/robot_cleaner2.dir/src/main.cpp.o: CMakeFiles/robot_cleaner2.dir/flags.make
 CMakeFiles/robot_cleaner2.dir/src/main.cpp.o: src/main.cpp
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lilinux/Documents/5TC/RobotCleaner2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/robot_cleaner2.dir/src/main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_cleaner2.dir/src/main.cpp.o -c /home/lilinux/Documents/5TC/RobotCleaner2/src/main.cpp
 
@@ -117,6 +151,18 @@ CMakeFiles/robot_cleaner2.dir/src/main.cpp.i: cmake_force
 CMakeFiles/robot_cleaner2.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot_cleaner2.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lilinux/Documents/5TC/RobotCleaner2/src/main.cpp -o CMakeFiles/robot_cleaner2.dir/src/main.cpp.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/robot_cleaner2.dir/src/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_cleaner2.dir/src/main.cpp.o -c "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/main.cpp"
+
+CMakeFiles/robot_cleaner2.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robot_cleaner2.dir/src/main.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/main.cpp" > CMakeFiles/robot_cleaner2.dir/src/main.cpp.i
+
+CMakeFiles/robot_cleaner2.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot_cleaner2.dir/src/main.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/main.cpp" -o CMakeFiles/robot_cleaner2.dir/src/main.cpp.s
+>>>>>>> 3d154e312dfb2de4248c99e63cec3b6b0510a857
 
 CMakeFiles/robot_cleaner2.dir/src/main.cpp.o.requires:
 
@@ -131,6 +177,7 @@ CMakeFiles/robot_cleaner2.dir/src/main.cpp.o.provides.build: CMakeFiles/robot_cl
 
 CMakeFiles/robot_cleaner2.dir/src/montecarlo.cpp.o: CMakeFiles/robot_cleaner2.dir/flags.make
 CMakeFiles/robot_cleaner2.dir/src/montecarlo.cpp.o: src/montecarlo.cpp
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lilinux/Documents/5TC/RobotCleaner2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/robot_cleaner2.dir/src/montecarlo.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_cleaner2.dir/src/montecarlo.cpp.o -c /home/lilinux/Documents/5TC/RobotCleaner2/src/montecarlo.cpp
 
@@ -141,6 +188,18 @@ CMakeFiles/robot_cleaner2.dir/src/montecarlo.cpp.i: cmake_force
 CMakeFiles/robot_cleaner2.dir/src/montecarlo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot_cleaner2.dir/src/montecarlo.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lilinux/Documents/5TC/RobotCleaner2/src/montecarlo.cpp -o CMakeFiles/robot_cleaner2.dir/src/montecarlo.cpp.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/robot_cleaner2.dir/src/montecarlo.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_cleaner2.dir/src/montecarlo.cpp.o -c "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/montecarlo.cpp"
+
+CMakeFiles/robot_cleaner2.dir/src/montecarlo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robot_cleaner2.dir/src/montecarlo.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/montecarlo.cpp" > CMakeFiles/robot_cleaner2.dir/src/montecarlo.cpp.i
+
+CMakeFiles/robot_cleaner2.dir/src/montecarlo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot_cleaner2.dir/src/montecarlo.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/montecarlo.cpp" -o CMakeFiles/robot_cleaner2.dir/src/montecarlo.cpp.s
+>>>>>>> 3d154e312dfb2de4248c99e63cec3b6b0510a857
 
 CMakeFiles/robot_cleaner2.dir/src/montecarlo.cpp.o.requires:
 
@@ -155,6 +214,7 @@ CMakeFiles/robot_cleaner2.dir/src/montecarlo.cpp.o.provides.build: CMakeFiles/ro
 
 CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.o: CMakeFiles/robot_cleaner2.dir/flags.make
 CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.o: src/qlearning.cpp
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lilinux/Documents/5TC/RobotCleaner2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.o -c /home/lilinux/Documents/5TC/RobotCleaner2/src/qlearning.cpp
 
@@ -165,6 +225,18 @@ CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.i: cmake_force
 CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lilinux/Documents/5TC/RobotCleaner2/src/qlearning.cpp -o CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.o -c "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/qlearning.cpp"
+
+CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/qlearning.cpp" > CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.i
+
+CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/qlearning.cpp" -o CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.s
+>>>>>>> 3d154e312dfb2de4248c99e63cec3b6b0510a857
 
 CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.o.requires:
 
@@ -179,6 +251,7 @@ CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.o.provides.build: CMakeFiles/rob
 
 CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o: CMakeFiles/robot_cleaner2.dir/flags.make
 CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o: src/qlearningLinearApprox.cpp
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lilinux/Documents/5TC/RobotCleaner2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o -c /home/lilinux/Documents/5TC/RobotCleaner2/src/qlearningLinearApprox.cpp
 
@@ -189,6 +262,18 @@ CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.i: cmake_force
 CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lilinux/Documents/5TC/RobotCleaner2/src/qlearningLinearApprox.cpp -o CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o -c "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/qlearningLinearApprox.cpp"
+
+CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/qlearningLinearApprox.cpp" > CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.i
+
+CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/qlearningLinearApprox.cpp" -o CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.s
+>>>>>>> 3d154e312dfb2de4248c99e63cec3b6b0510a857
 
 CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o.requires:
 
@@ -203,6 +288,7 @@ CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o.provides.build: CM
 
 CMakeFiles/robot_cleaner2.dir/src/state.cpp.o: CMakeFiles/robot_cleaner2.dir/flags.make
 CMakeFiles/robot_cleaner2.dir/src/state.cpp.o: src/state.cpp
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lilinux/Documents/5TC/RobotCleaner2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/robot_cleaner2.dir/src/state.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_cleaner2.dir/src/state.cpp.o -c /home/lilinux/Documents/5TC/RobotCleaner2/src/state.cpp
 
@@ -213,6 +299,18 @@ CMakeFiles/robot_cleaner2.dir/src/state.cpp.i: cmake_force
 CMakeFiles/robot_cleaner2.dir/src/state.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot_cleaner2.dir/src/state.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lilinux/Documents/5TC/RobotCleaner2/src/state.cpp -o CMakeFiles/robot_cleaner2.dir/src/state.cpp.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/robot_cleaner2.dir/src/state.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_cleaner2.dir/src/state.cpp.o -c "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/state.cpp"
+
+CMakeFiles/robot_cleaner2.dir/src/state.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robot_cleaner2.dir/src/state.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/state.cpp" > CMakeFiles/robot_cleaner2.dir/src/state.cpp.i
+
+CMakeFiles/robot_cleaner2.dir/src/state.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot_cleaner2.dir/src/state.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/state.cpp" -o CMakeFiles/robot_cleaner2.dir/src/state.cpp.s
+>>>>>>> 3d154e312dfb2de4248c99e63cec3b6b0510a857
 
 CMakeFiles/robot_cleaner2.dir/src/state.cpp.o.requires:
 
@@ -227,6 +325,7 @@ CMakeFiles/robot_cleaner2.dir/src/state.cpp.o.provides.build: CMakeFiles/robot_c
 
 CMakeFiles/robot_cleaner2.dir/src/world.cpp.o: CMakeFiles/robot_cleaner2.dir/flags.make
 CMakeFiles/robot_cleaner2.dir/src/world.cpp.o: src/world.cpp
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lilinux/Documents/5TC/RobotCleaner2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/robot_cleaner2.dir/src/world.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_cleaner2.dir/src/world.cpp.o -c /home/lilinux/Documents/5TC/RobotCleaner2/src/world.cpp
 
@@ -237,6 +336,18 @@ CMakeFiles/robot_cleaner2.dir/src/world.cpp.i: cmake_force
 CMakeFiles/robot_cleaner2.dir/src/world.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot_cleaner2.dir/src/world.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lilinux/Documents/5TC/RobotCleaner2/src/world.cpp -o CMakeFiles/robot_cleaner2.dir/src/world.cpp.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/robot_cleaner2.dir/src/world.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_cleaner2.dir/src/world.cpp.o -c "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/world.cpp"
+
+CMakeFiles/robot_cleaner2.dir/src/world.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robot_cleaner2.dir/src/world.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/world.cpp" > CMakeFiles/robot_cleaner2.dir/src/world.cpp.i
+
+CMakeFiles/robot_cleaner2.dir/src/world.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot_cleaner2.dir/src/world.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/world.cpp" -o CMakeFiles/robot_cleaner2.dir/src/world.cpp.s
+>>>>>>> 3d154e312dfb2de4248c99e63cec3b6b0510a857
 
 CMakeFiles/robot_cleaner2.dir/src/world.cpp.o.requires:
 
@@ -273,7 +384,7 @@ robot_cleaner2: CMakeFiles/robot_cleaner2.dir/src/state.cpp.o
 robot_cleaner2: CMakeFiles/robot_cleaner2.dir/src/world.cpp.o
 robot_cleaner2: CMakeFiles/robot_cleaner2.dir/build.make
 robot_cleaner2: CMakeFiles/robot_cleaner2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lilinux/Documents/5TC/RobotCleaner2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable robot_cleaner2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable robot_cleaner2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/robot_cleaner2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -297,6 +408,6 @@ CMakeFiles/robot_cleaner2.dir/clean:
 .PHONY : CMakeFiles/robot_cleaner2.dir/clean
 
 CMakeFiles/robot_cleaner2.dir/depend:
-	cd /home/lilinux/Documents/5TC/RobotCleaner2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lilinux/Documents/5TC/RobotCleaner2 /home/lilinux/Documents/5TC/RobotCleaner2 /home/lilinux/Documents/5TC/RobotCleaner2 /home/lilinux/Documents/5TC/RobotCleaner2 /home/lilinux/Documents/5TC/RobotCleaner2/CMakeFiles/robot_cleaner2.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2" "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2" "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2" "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2" "/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/CMakeFiles/robot_cleaner2.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/robot_cleaner2.dir/depend
 

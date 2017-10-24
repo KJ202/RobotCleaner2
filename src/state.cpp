@@ -54,8 +54,10 @@ namespace cleaner{
     std::vector<double> features;
     features.assign(this->NBF*action::END,0.0);
 
+
     features[a*this->NBF] = battery;
     features[a*this->NBF+1] = this->getBaseDistance();
+
 
 
     return features;
