@@ -16,15 +16,15 @@ namespace cleaner{
     void qlearningLinearApprox::solve(){
       double r;
       int s, a, ss;
-      this->init();
+      this->init(25);
 
       do{
-        s=0;
-        for(int i=0; i<100; i++){
+        s=25;
+        for(int i=0; i<1; i++){
           a = greedy(s);
           w.execute(s, static_cast<action>(a), ss, r);
-            std::cout <<"\nreturn s"<< w.getState(s)->getBattery() << w.getState(s)->getPose() <<std::endl;
-            std::cout << "\nreturn ss" <<w.getState(ss)->getBattery() << w.getState(ss)->getPose() <<std::endl;
+            std::cout <<"\nreturn s"<< s <<" "<< w.getState(s)->getBattery() << w.getState(s)->getPose() <<std::endl;
+            std::cout << "\nreturn ss"<< s <<" " <<w.getState(ss)->getBattery() << w.getState(ss)->getPose() <<std::endl;
           this->backup(s,a,ss,r);
           s = ss;
         }
@@ -62,14 +62,19 @@ namespace cleaner{
       else {
         agreedy = rand() % 7;
       }
+        agreedy=4;
         std::cout << rand << "action returned" <<agreedy<< std::endl;
       return agreedy;
     }
     
-    double qlearningLinearApprox::approxQf(std::vector<double>const& phisa){
-    	double approx=0.0;
+    double qlearningLinearApprox::approxQf(std::vector<double> phisa){
+    	double approx;
+        std::cout <<"\n approx" ;
+        for (auto i = phisa.begin(); i != phisa.end(); ++i)
+        {std::cout << *i << ' ';}
     	approx = std::inner_product(phisa.begin(),phisa.end(),this->teta.begin(),0.0);
-        std::cout << "approx : " << approx << std::endl;
+
+        std::cout << "approx : " << approx <<  std::endl;
     	return approx;
     }
 
@@ -77,6 +82,8 @@ namespace cleaner{
       int i;
       this->addFeaturesVectorsForNewS(ss);
       double approxQfSS = this->getValueAt(ss);
+        std::cout << "before qfapprox after approxqfss";
+
       double qfapprox = this->approxQf(this->phiSA[s][a]);
       double tDiff = this->learning_rate * (r + this->gamma * approxQfSS - qfapprox);
       //std::cout << "\n diff" << tDiff << std::endl;
@@ -92,18 +99,22 @@ namespace cleaner{
 
         for(int a=0; a<action::END; ++a){
              this->phiSA.at(ns).emplace(a, w.getState(ns)->getFeatures(a));
+
         }
     }
 
-    void qlearningLinearApprox::init(){
+    void qlearningLinearApprox::init(int fs){
       /*init teta vector arbitrary*/
         int len = this->NBF*action::END;
-        this->teta.assign(len,0.0);
-        this->phiSA.emplace(0,  std::unordered_map<int, std::vector<double>>());
+        this->teta.assign(len,1.0);
+        this->phiSA.emplace(fs,  std::unordered_map<int, std::vector<double>>());
 
         for(int a=0; a<action::END; ++a){
-            this->phiSA.at(0).emplace(a, w.getState(0)->getFeatures(a));
+            this->phiSA.at(fs).emplace(a, w.getState(fs)->getFeatures(a));
+
         }
+
+
 
     }
 }

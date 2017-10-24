@@ -64,9 +64,9 @@ namespace cleaner{
 
         }
     }
-
+      /*  std::cout <<"\n" ;
      /* print for testing
-      * for (auto i = features.begin(); i != features.end(); ++i)
+       for (auto i = features.begin(); i != features.end(); ++i)
             std::cout << *i << ' ';*/
     return features;
   }

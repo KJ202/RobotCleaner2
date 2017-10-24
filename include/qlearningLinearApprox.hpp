@@ -32,7 +32,7 @@ namespace cleaner{
     void backup(int /*current state*/, int /*action*/, int /*next state*/, double /*reward*/);
     void addFeaturesVectorsForNewS(int);
     void plots();
-    void init();
+    void init(int);
 
   public:
     ~qlearningLinearApprox();
@@ -40,6 +40,6 @@ namespace cleaner{
     void solve();
     int greedy(int);
     double getValueAt(int);
-    double approxQf(std::vector<double> const& );
+    double approxQf(std::vector<double> );
   };
 }
