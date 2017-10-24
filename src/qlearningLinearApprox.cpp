@@ -33,7 +33,8 @@ namespace cleaner{
     double qlearningLinearApprox::getValueAt(int s){
       double value = MIN;
       for(int a=0; a<action::END; ++a){
-      	std::vector<double> phiSA = w.getState(s)->getFeatures(a);
+      	std::vector<double> phiSA ;
+          phiSA = w.getState(s)->getFeatures(a);
       	double qfapprox = this->approxQf(phiSA);
         value = std::max(value, qfapprox);//here
       } return value;
@@ -84,7 +85,9 @@ namespace cleaner{
 
     void qlearningLinearApprox::init(){
       /*init teta vector arbitrary*/
-      this->teta.assign(this->NBF*action::END,0.0);
+      int len = this->NBF*action::END;
+      this->teta.resize(len);
+      this->teta.assign(len,0.0);
        
     }
 }

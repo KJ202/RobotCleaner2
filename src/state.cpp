@@ -22,7 +22,7 @@ namespace cleaner{
     return pose;
   }
 
-  int state::getBaseDistance(){
+  int state::getBaseDistance()const{
     /*for simplicity basePosition = 0*/
     int b = 0;
     int i;
@@ -53,10 +53,10 @@ namespace cleaner{
 
     std::vector<double> features;
     features.assign(this->NBF*action::END,0.0);
-    
-    features[a] = battery;
-    features[a+1] = this->getBaseDistance();
-    
+
+    features[a*this->NBF] = battery;
+    features[a*this->NBF+1] = this->getBaseDistance();
+
 
     return features;
   }

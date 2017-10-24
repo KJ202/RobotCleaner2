@@ -40,9 +40,9 @@ namespace cleaner{
       bool getBase() const;
       size getBattery() const;
       size getPose() const;
-      int getBaseDistance();
-      // Return the matrix for a given state and action 
-      std::vector<double>const& getFeatures(int);
+      int getBaseDistance()const;
+      // Return the matrix for a given state and action
+      std::vector<double>const& getFeatures(int) ;
 
       /*!
       * \fn std::ostream& operator<<(std::ostream&, const state&)
