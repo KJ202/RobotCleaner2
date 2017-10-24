@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/action.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/action.hpp
 types.hpp
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/types.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/types.hpp
 
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/dp.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/dp.hpp
 cmath
 -
 limits
@@ -18,9 +18,9 @@ limits
 unordered_map
 -
 world.hpp
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/world.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/world.hpp
 
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/montecarlo.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/montecarlo.hpp
 math.h
 -
 tuple
@@ -30,9 +30,9 @@ vector
 unordered_map
 -
 world.hpp
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/world.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/world.hpp
 
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/qlearning.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/qlearning.hpp
 math.h
 -
 tuple
@@ -42,9 +42,9 @@ vector
 unordered_map
 -
 world.hpp
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/world.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/world.hpp
 
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/qlearningLinearApprox.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/qlearningLinearApprox.hpp
 math.h
 -
 tuple
@@ -54,9 +54,9 @@ vector
 unordered_map
 -
 world.hpp
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/world.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/world.hpp
 
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/state.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/state.hpp
 memory
 -
 vector
@@ -64,13 +64,13 @@ vector
 string
 -
 types.hpp
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/types.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/types.hpp
 action.hpp
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/action.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/action.hpp
 
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/types.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/types.hpp
 
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/world.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/world.hpp
 cstdlib
 -
 stdio.h
@@ -86,53 +86,53 @@ memory
 cmath
 -
 types.hpp
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/types.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/types.hpp
 state.hpp
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/state.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/state.hpp
 action.hpp
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/action.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/action.hpp
 
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/action.cpp
+/home/lilinux/Documents/5TC/RobotCleaner2/src/action.cpp
 
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/dp.cpp
+/home/lilinux/Documents/5TC/RobotCleaner2/src/dp.cpp
 ../include/dp.hpp
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/dp.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/dp.hpp
 
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/main.cpp
+/home/lilinux/Documents/5TC/RobotCleaner2/src/main.cpp
 time.h
 -
 ../include/dp.hpp
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/dp.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/dp.hpp
 ../include/world.hpp
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/world.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/world.hpp
 ../include/qlearning.hpp
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/qlearning.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/qlearning.hpp
 ../include/qlearningLinearApprox.hpp
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/qlearningLinearApprox.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/qlearningLinearApprox.hpp
 ../include/montecarlo.hpp
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/montecarlo.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/montecarlo.hpp
 
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/montecarlo.cpp
+/home/lilinux/Documents/5TC/RobotCleaner2/src/montecarlo.cpp
 ../include/montecarlo.hpp
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/montecarlo.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/montecarlo.hpp
 
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/qlearning.cpp
+/home/lilinux/Documents/5TC/RobotCleaner2/src/qlearning.cpp
 ../include/qlearning.hpp
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/qlearning.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/qlearning.hpp
 
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/qlearningLinearApprox.cpp
+/home/lilinux/Documents/5TC/RobotCleaner2/src/qlearningLinearApprox.cpp
 numeric
 -
 ../include/qlearningLinearApprox.hpp
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/qlearningLinearApprox.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/qlearningLinearApprox.hpp
 
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/state.cpp
+/home/lilinux/Documents/5TC/RobotCleaner2/src/state.cpp
 ../include/state.hpp
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/state.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/state.hpp
 ../include/world.hpp
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/world.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/world.hpp
 
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/world.cpp
+/home/lilinux/Documents/5TC/RobotCleaner2/src/world.cpp
 ../include/world.hpp
-/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/world.hpp
+/home/lilinux/Documents/5TC/RobotCleaner2/include/world.hpp
 

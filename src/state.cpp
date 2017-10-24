@@ -33,11 +33,11 @@ namespace cleaner{
     		break; 	
     	}
     	else if (pose < i*width){
-    		dist = (pose- (i-1)*width) + i;
+    		dist = (pose- (i-1)*width) + (i-1);
     		break;
     	}
     }
-    return dist;
+      return dist;
   }
 
 /*
@@ -49,17 +49,25 @@ namespace cleaner{
 */
 
   
-  std::vector<double>const& state::getFeatures(int a){
+  std::vector<double> state::getFeatures(int a){
 
     std::vector<double> features;
-    features.assign(this->NBF*action::END,0.0);
 
+    for(int j = 0 ;j<action::END;++j){
+        if (j == a){
+            features.push_back((double)battery);
+            features.push_back((double)this->getBaseDistance());
+        }
+        else{
+            features.push_back(0.0);
+            features.push_back(0.0);
 
-    features[a*this->NBF] = battery;
-    features[a*this->NBF+1] = this->getBaseDistance();
+        }
+    }
 
-
-
+     /* print for testing
+      * for (auto i = features.begin(); i != features.end(); ++i)
+            std::cout << *i << ' ';*/
     return features;
   }
 }
