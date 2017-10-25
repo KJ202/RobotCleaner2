@@ -10,7 +10,7 @@ namespace cleaner{
     }
 
     void qlearningLinearApprox::plots(){
-      std::cout << "getValueAt" << this->getValueAt(0) << std::endl;
+      std::cout << this->getValueAt(0) << std::endl;
   }
 
     void qlearningLinearApprox::solve(){
@@ -21,12 +21,12 @@ namespace cleaner{
       do{
         s=0;
         for(int i=0; i<100; i++){
+          std::cout << "I'm in the state " << s << std::endl;
           a = greedy(s);
-          std::cout << "J'effectue le greedy" << std::endl;
+          std::cout << "I have choosen the action " << a << std::endl;
           w.execute(s, static_cast<action>(a), ss, r);
-          std::cout << "J'effectue le execute" << std::endl;
+          //std::cout << "Considering the action and the state, we will be soon in the state " << ss << std::endl;
           this->backup(s,a,ss,r);
-          std::cout << "J'effectue le backup" << std::endl;
           s = ss;
         }
 
@@ -40,7 +40,8 @@ namespace cleaner{
       	std::vector<double>const& phiSA = w.getState(s)->getFeatures(a);
       	double qfapprox = this->approxQf(phiSA);
         value = std::max(value, qfapprox);//here
-      } return value;
+      }
+      return value;
     }
 
     int qlearningLinearApprox::greedy(int s){
@@ -50,11 +51,9 @@ namespace cleaner{
 
       if( rd > this->epsilon ) {
         for(int a=0; a<action::END; ++a){
-          std::vector<double>const& phiSA = w.getState(s)->getFeatures(a);
+          std::vector<double> phiSA = w.getState(s)->getFeatures(a);
           double qfapprox = this->approxQf(phiSA);
-          std::cout << "qfapprox = " << qfapprox << std::endl;
           if( value < qfapprox ){ //here
-            std::cout << "Je rentre dans la boucle if";
             agreedy = a;
             value = qfapprox;
           }
@@ -62,11 +61,9 @@ namespace cleaner{
       }
 
       else {
-        std::cout << "Je rentre dans la boucle else";
         agreedy = rand() % 7;
       }
 
-      std::cout << "J'ai retourné le agreedy" << std::endl;
       return agreedy;
     }
     
@@ -77,17 +74,20 @@ namespace cleaner{
     }
 
     void qlearningLinearApprox::backup(int s, int a, int ss, double r){
-      std::cout << "Je suis dans la fonction backup" << std::endl;
       int i;
-      std::vector<double>const& phiSA = w.getState(s)->getFeatures(a);
+      std::vector<double> phiSA = w.getState(s)->getFeatures(a);
       double approxQfSS = this->getValueAt(ss);
-      std::cout << "Je vais appliquer la fonction sensible";
       double qfapprox = this->approxQf(phiSA);
       double tDiff = this->learning_rate * (r + this->gamma * approxQfSS - qfapprox);
       
       for(i=0;i < this->teta.size(); ++i){
-      	this->teta[i] = this->teta[i] + tDiff; 	
+      	this->teta[i] = this->teta[i] + tDiff*phiSA[i];
       }
+
+
+
+
+
       
     }
 

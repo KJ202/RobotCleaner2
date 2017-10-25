@@ -231,6 +231,33 @@ src/montecarlo.cpp.s:
 	$(MAKE) -f CMakeFiles/robot_cleaner2.dir/build.make CMakeFiles/robot_cleaner2.dir/src/montecarlo.cpp.s
 .PHONY : src/montecarlo.cpp.s
 
+src/montecarloLinearApprox.o: src/montecarloLinearApprox.cpp.o
+
+.PHONY : src/montecarloLinearApprox.o
+
+# target to build an object file
+src/montecarloLinearApprox.cpp.o:
+	$(MAKE) -f CMakeFiles/robot_cleaner2.dir/build.make CMakeFiles/robot_cleaner2.dir/src/montecarloLinearApprox.cpp.o
+.PHONY : src/montecarloLinearApprox.cpp.o
+
+src/montecarloLinearApprox.i: src/montecarloLinearApprox.cpp.i
+
+.PHONY : src/montecarloLinearApprox.i
+
+# target to preprocess a source file
+src/montecarloLinearApprox.cpp.i:
+	$(MAKE) -f CMakeFiles/robot_cleaner2.dir/build.make CMakeFiles/robot_cleaner2.dir/src/montecarloLinearApprox.cpp.i
+.PHONY : src/montecarloLinearApprox.cpp.i
+
+src/montecarloLinearApprox.s: src/montecarloLinearApprox.cpp.s
+
+.PHONY : src/montecarloLinearApprox.s
+
+# target to generate assembly for a file
+src/montecarloLinearApprox.cpp.s:
+	$(MAKE) -f CMakeFiles/robot_cleaner2.dir/build.make CMakeFiles/robot_cleaner2.dir/src/montecarloLinearApprox.cpp.s
+.PHONY : src/montecarloLinearApprox.cpp.s
+
 src/qlearning.o: src/qlearning.cpp.o
 
 .PHONY : src/qlearning.o
@@ -360,6 +387,9 @@ help:
 	@echo "... src/montecarlo.o"
 	@echo "... src/montecarlo.i"
 	@echo "... src/montecarlo.s"
+	@echo "... src/montecarloLinearApprox.o"
+	@echo "... src/montecarloLinearApprox.i"
+	@echo "... src/montecarloLinearApprox.s"
 	@echo "... src/qlearning.o"
 	@echo "... src/qlearning.i"
 	@echo "... src/qlearning.s"

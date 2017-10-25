@@ -20,8 +20,11 @@ namespace cleaner{
       do{
         s=0;
         for(int i=0; i<100; i++){
+          std::cout << "I'm in the state " << s << std::endl;
           a = greedy(s);
+          std::cout << "I have choosen the action " << a << std::endl;
           w.execute(s, static_cast<action>(a), ss, r);
+          std::cout << "Considering the action and the state, we will be soon in the state " << ss << std::endl;
           this->backup(s,a,ss,r);
           s = ss;
         }

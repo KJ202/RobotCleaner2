@@ -36,6 +36,6 @@ add_executable(
         include/state.hpp
         include/types.hpp
         include/world.hpp
-        
-        
-)
+
+
+        src/montecarloLinearApprox.cpp include/montecarloLinearApprox.hpp)

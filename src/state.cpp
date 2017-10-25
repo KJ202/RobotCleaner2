@@ -49,7 +49,7 @@ namespace cleaner{
 */
 
   
-  std::vector<double>const& state::getFeatures(int a){
+  std::vector<double> state::getFeatures(int a){
 
     std::vector<double> features;
     features.assign(this->NBF*action::END,0.0);

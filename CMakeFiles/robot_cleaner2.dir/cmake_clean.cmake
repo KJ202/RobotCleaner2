@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/robot_cleaner2.dir/src/qlearningLinearApprox.cpp.o"
   "CMakeFiles/robot_cleaner2.dir/src/state.cpp.o"
   "CMakeFiles/robot_cleaner2.dir/src/world.cpp.o"
+  "CMakeFiles/robot_cleaner2.dir/src/montecarloLinearApprox.cpp.o"
   "robot_cleaner2.pdb"
   "robot_cleaner2"
 )
