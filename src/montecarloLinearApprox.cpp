@@ -19,7 +19,7 @@ namespace cleaner{
     }
 
     void montecarloLinearApprox::solve(){
-        this->init();
+        this->init(0);
 
         do{
             this->setEpisode();
@@ -30,7 +30,7 @@ namespace cleaner{
     }
 
 
-    double montecarloLinearApprox::approxMC(std::vector<double>const& phisa){
+    double montecarloLinearApprox::approxMC(std::vector<double> phisa){
         double approx=0.0;
         approx = std::inner_product(phisa.begin(),phisa.end(),this->teta.begin(),0.0);
         return approx;
@@ -41,24 +41,41 @@ namespace cleaner{
     double montecarloLinearApprox::getValueAt(int s){
         double value = MIN;
         for(int a=0; a<action::END; ++a){
-            std::vector<double>const& phiSA = w.getState(s)->getFeatures(a);
-            double mcapprox = this->approxMC(phiSA);
+            double mcapprox = this->approxMC(this->phiSA[s][a]);
             value = std::max(value, mcapprox);
         } return value;
     }
 
-    action montecarloLinearApprox::greedy(int s){
-        action agreedy;
+    int montecarloLinearApprox::greedy(int s){
+        int agreedy;
         double value = MIN;
-        for(int a=0; a<action::END; ++a){
-            std::vector<double>const& phiSA = w.getState(s)->getFeatures(a);
-            double mcapprox = this->approxMC(phiSA);
-            if( value < mcapprox ){
-                agreedy = static_cast<action>(a);
-                value = mcapprox;
+        double rd = rand() / ((double) RAND_MAX);
+        if( rd > this->epsilon ) {
+            for(int a=0; a<action::END; ++a){
+                //at this point s has already been initialized
+                this->addFeaturesVectorsForNewS(s);
+                double mcapprox = this->approxMC(this->phiSA[s][a]);
+                if( value < mcapprox ){ //here
+
+                    agreedy = a;
+                    value = mcapprox;
+                }
+                if(s ==0){
+                    agreedy = 4;
+                    value = mcapprox;
+                    break;
+                }
             }
-        } return agreedy;
+        }
+
+        else {
+            agreedy = rand() % 7;
+        }
+
+        //std::cout << rand << " action returned " <<agreedy<< std::endl;
+        return agreedy;
     }
+
 
     double montecarloLinearApprox::getReturn(int pose){
         double r = 0;
@@ -71,7 +88,7 @@ namespace cleaner{
 
 
     void montecarloLinearApprox::setEpisode(){
-        action a;
+        int a;
         double r;
         this->episode.clear();
         int s, ss;
@@ -91,7 +108,7 @@ namespace cleaner{
                 a = static_cast<action>(rand() % 7);
             }
 
-            w.execute(s, a, ss, r);
+            w.execute(s, static_cast<action>(a), ss, r);
 
             this->episode.push_back(std::make_tuple(s, a, r));
 
@@ -111,18 +128,22 @@ namespace cleaner{
         for(s=0; s<this->w.getNumStates(); ++s){
             for(a=0; a<action::END; ++a){
                 if( this->pf[s][a] > -1 ){
-                    std::vector<double>const& phiSA = w.getState(s)->getFeatures(a);
-                    double mcapprox = this->approxMC(phiSA);
+                    this->addFeaturesVectorsForNewS(s);
+                    double mcapprox = this->approxMC(this->phiSA[s][a]);
                     double G = this->getReturn(this->pf[s][a]);
 
                     double tDiff = this->learning_rate * (G - mcapprox);
 
                     for(int i=0;i < this->teta.size(); ++i){
-                        this->teta[i] = this->teta[i] + tDiff*phiSA[i];
+                        this->teta[i] = this->teta[i] + tDiff*this->phiSA[s][a][i];
                     }
 
-                    std::cout << "teta[0] = " << this->teta[0] << std::endl;
-                    std::cout << "teta[1] = " << this->teta[1] << std::endl;
+                    for (int j = 0; j < teta.size() ; ++j) {
+                        std::cout << "teta[i] = " << this->teta[j] << std::endl;
+
+                    }
+
+
 
 /*            old = this->qf[s][a];
             cumul = this->getReturn(this->pf[s][a]);
@@ -135,19 +156,32 @@ namespace cleaner{
         }
     }
 
-    void montecarloLinearApprox::init(){
-        for(int s=0; s<this->w.getNumStates(); ++s){
-            this->pf.emplace(s,  std::unordered_map<int, int>());
-            this->qf.emplace(s,  std::unordered_map<int, double>());
-            this->jf.emplace(s,  std::unordered_map<int, std::pair<double, int>>());
-            for(int a=0; a<action::END; ++a){
-                this->pf.at(s).emplace(a, -1);
-                this->qf.at(s).emplace(a, 0.0);
-                this->jf.at(s).emplace(a, std::pair<double, int>(0.0, 0));
-            }
-        }
 
-        this->teta.assign(this->NBF*action::END,0.0);
+
+    void montecarloLinearApprox::addFeaturesVectorsForNewS(int ns){
+        this->phiSA.emplace(ns,  std::unordered_map<int, std::vector<double>>());
+
+        for(int a=0; a<action::END; ++a){
+
+            //std::cout << "\n state " << ns << " : " << std::endl;
+            this->phiSA.at(ns).emplace(a, w.getState(ns)->getFeatures(a));
+
+        }
+    }
+
+    void montecarloLinearApprox::init(int fs) {
+        /*init teta vector arbitrary*/
+        int len = this->NBF * action::END;
+        this->teta.assign(len, 1.0);
+
+
+        this->phiSA.emplace(fs, std::unordered_map<int, std::vector<double>>());
+
+        for (int a = 0; a < action::END; ++a) {
+            //std::cout << "\n state " << fs << " : " << std::endl;
+            this->phiSA.at(fs).emplace(a, w.getState(fs)->getFeatures(a));
+
+        }
     }
 
 }

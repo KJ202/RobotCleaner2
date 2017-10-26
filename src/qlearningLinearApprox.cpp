@@ -10,7 +10,7 @@ namespace cleaner{
     }
 
     void qlearningLinearApprox::plots(){
-      std::cout << this->getValueAt(0) << std::endl;
+      //std::cout << this->getValueAt(0) << std::endl;
   }
 
     void qlearningLinearApprox::solve(){

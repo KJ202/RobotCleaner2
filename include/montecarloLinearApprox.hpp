@@ -23,7 +23,7 @@ namespace cleaner{
     protected:
         world w;
         double gamma, epsilon, learning_rate=0.01;
-        int NBF = 2;//nb features
+        int NBF = 3;//nb features
         int cepisode = 0, episodes;
         double MIN = -100000, MAX = 100000;
         std::vector<std::tuple<int, int, int>> episode;
@@ -36,7 +36,7 @@ namespace cleaner{
 
         // track the mean of any pair of state and action
         std::unordered_map<int, std::unordered_map<int, std::pair<double, int>>> jf;
-
+        std::unordered_map<int, std::unordered_map<int, std::vector<double>>> phiSA;
         std::vector<double> teta;
 
 
@@ -44,15 +44,17 @@ namespace cleaner{
         void setEpisode();
         void backup();
         void plots();
-        void init();
+        void init(int);
 
     public:
         ~montecarloLinearApprox();
         montecarloLinearApprox(world const&, double, double, int);
         void solve();
-        action greedy(int);
+        int greedy(int);
         double getValueAt(int);
 
-        double approxMC(const std::vector<double> &phisa);
+        double approxMC( std::vector<double> phisa);
+
+        void addFeaturesVectorsForNewS(int ns);
     };
 }

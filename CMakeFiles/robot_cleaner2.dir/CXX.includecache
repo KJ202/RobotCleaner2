@@ -32,6 +32,18 @@ unordered_map
 world.hpp
 /Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/world.hpp
 
+/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/montecarloLinearApprox.hpp
+math.h
+-
+tuple
+-
+vector
+-
+unordered_map
+-
+world.hpp
+/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/world.hpp
+
 /Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/qlearning.hpp
 math.h
 -
@@ -111,10 +123,18 @@ time.h
 /Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/qlearningLinearApprox.hpp
 ../include/montecarlo.hpp
 /Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/montecarlo.hpp
+../include/montecarloLinearApprox.hpp
+/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/montecarloLinearApprox.hpp
 
 /Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/montecarlo.cpp
 ../include/montecarlo.hpp
 /Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/montecarlo.hpp
+
+/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/montecarloLinearApprox.cpp
+../include/montecarloLinearApprox.hpp
+/Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/montecarloLinearApprox.hpp
+numeric
+-
 
 /Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/qlearning.cpp
 ../include/qlearning.hpp

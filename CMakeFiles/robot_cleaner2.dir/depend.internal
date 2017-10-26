@@ -14,6 +14,7 @@ CMakeFiles/robot_cleaner2.dir/src/main.cpp.o
  /Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/action.hpp
  /Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/dp.hpp
  /Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/montecarlo.hpp
+ /Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/montecarloLinearApprox.hpp
  /Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/qlearning.hpp
  /Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/qlearningLinearApprox.hpp
  /Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/state.hpp
@@ -27,6 +28,13 @@ CMakeFiles/robot_cleaner2.dir/src/montecarlo.cpp.o
  /Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/types.hpp
  /Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/world.hpp
  /Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/montecarlo.cpp
+CMakeFiles/robot_cleaner2.dir/src/montecarloLinearApprox.cpp.o
+ /Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/action.hpp
+ /Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/montecarloLinearApprox.hpp
+ /Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/state.hpp
+ /Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/types.hpp
+ /Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/world.hpp
+ /Users/kianjamali/Documents/TP IA 2/RobotCleaner2/src/montecarloLinearApprox.cpp
 CMakeFiles/robot_cleaner2.dir/src/qlearning.cpp.o
  /Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/action.hpp
  /Users/kianjamali/Documents/TP IA 2/RobotCleaner2/include/qlearning.hpp

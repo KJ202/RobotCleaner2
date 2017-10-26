@@ -13,13 +13,16 @@
   cleaner::world w(2,2,3);//width/height/cbattery
   std::cout << w << std::endl;
 
-  /*cleaner::dp dp_solver(w, 0.001, 0.99);
+/*  cleaner::dp dp_solver(w, 0.001, 0.99);
   dp_solver.solve();
   std::cout << "dp_solver("<< *w.getState(0) << ") = " << dp_solver.getValueAt(0) << std::endl;*/
 
   cleaner::montecarloLinearApprox mc_solver(w, 0.1, 0.99, 100);
   mc_solver.solve();
   std::cout << "mc_solver("<< *w.getState(0) << ") = " << mc_solver.getValueAt(0) << std::endl;
+
+
+
 /*
   cleaner::qlearning q_solver(w, 0.1, 0.1, 0.99, 1000);
   q_solver.solve();
