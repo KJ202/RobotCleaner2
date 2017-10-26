@@ -3,6 +3,7 @@
 #include <vector>
 #include <unordered_map>
 
+
 #include "world.hpp"
 
 //!
@@ -24,7 +25,7 @@ namespace cleaner{
     world w;
     int episode = 0, episodes;
     double MIN = -100000, MAX = 100000;
-    int NBF = 2;//nb features
+    int NBF = 3;//nb features
     double gamma, epsilon, learning_rate;
     std::unordered_map<int, std::unordered_map<int, std::vector<double>>> phiSA;
     std::vector<double> teta;

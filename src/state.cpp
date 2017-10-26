@@ -22,22 +22,43 @@ namespace cleaner{
     return pose;
   }
 
+  int state::getDistDirt()const{ //features get distance to closer dirty cell excepting the current cell
+    /*find dirt between base and position */
+      int dirtPose = pose-1;
+      int dist = 0;
+
+      while(dirtPose>=0){
+         if(grid[dirtPose]== false){
+             dist=(int) (pose/width)-(dirtPose/width) +std::abs((int)(pose%width)-(dirtPose%width));
+             break;
+         }
+         dirtPose--;
+      }
+      /*find dirt after position */
+      dirtPose =pose+1;
+      while(dirtPose<width*height){
+          if(grid[dirtPose]== false){
+              int distAft = (int) (dirtPose/width)-(pose/width) +std::abs((int)(pose%width)-(dirtPose%width));
+              dist = std::min(dist,distAft);
+              break;
+          }
+          dirtPose++;
+      }
+      return dist;
+  }
+
+   int  state::getCurrentDirt()const{
+       int res = grid[pose] == false ? 1 : 0;
+       return res;
+    }
+
   int state::getBaseDistance()const{
     /*for simplicity basePosition = 0*/
     int b = 0;
-    int i;
+
     int dist;
-    for(i=1; i<= height;++i){
-    	if(pose < i*width && i == 1){
-    		dist = pose - b ;
-    		break; 	
-    	}
-    	else if (pose < i*width){
-    		dist = (pose- (i-1)*width) + (i-1);
-    		break;
-    	}
-    }
-      return dist;
+    dist=(int) (pose/width)+pose%width;
+    return dist;
   }
 
 /*
@@ -57,16 +78,19 @@ namespace cleaner{
         if (j == a){
             features.push_back((double)battery);
             features.push_back((double)this->getBaseDistance());
+            features.push_back((double) this->getCurrentDirt());
+           // features.push_back((double)this->getDistDirt());
         }
         else{
+            features.push_back(0.0);
             features.push_back(0.0);
             features.push_back(0.0);
 
         }
     }
-      /*  std::cout <<"\n" ;
-     /* print for testing
-       for (auto i = features.begin(); i != features.end(); ++i)
+     // std::cout <<"\n" ;
+     //print for testing
+       /*for (auto i = features.begin(); i != features.end(); ++i)
             std::cout << *i << ' ';*/
     return features;
   }

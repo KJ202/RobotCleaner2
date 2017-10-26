@@ -27,7 +27,7 @@
 namespace cleaner{
   class state{
   protected:
-    int NBF = 2;//nb features
+    int NBF = 3;//nb features
     bool base;
     size battery, pose,height,width;
     std::vector<bool> grid;
@@ -40,6 +40,8 @@ namespace cleaner{
       bool getBase() const;
       size getBattery() const;
       size getPose() const;
+      int getDistDirt()const;
+      int getCurrentDirt()const;
       int getBaseDistance()const;
       // Return the matrix for a given state and action
       std::vector<double> getFeatures(int) ;
