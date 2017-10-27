@@ -8,24 +8,26 @@
 
 
 namespace cleaner{
-    montecarloLinearApprox::montecarloLinearApprox(world const& w, double epsilon, double gamma, int episodes) : w(w), epsilon(epsilon), gamma(gamma), episodes(episodes){
+    montecarloLinearApprox::montecarloLinearApprox(world const& w, double epsilon, double learning_rate, double gamma, int episodes, int nbf) : w(w), epsilon(epsilon), learning_rate(learning_rate), gamma(gamma), episodes(episodes), NBF(nbf){
     }
 
     montecarloLinearApprox::~montecarloLinearApprox(){
     }
 
-    void montecarloLinearApprox::plots(){
-        std::cout << this->getValueAt(0) << std::endl;
-    }
+    double montecarloLinearApprox::plots(){
+        //std::cout << this->getValueAt(0) << std::endl;
+        return this->getValueAt(0) ;
 
-    void montecarloLinearApprox::solve(){
+    }
+    std::vector<double> montecarloLinearApprox::solve(){
         this->init(0);
+        std::vector <double> plotVector;
 
         do{
             this->setEpisode();
             this->backup();
 
-            this->plots();
+            plotVector.push_back(this->plots());
         }while( ++this->cepisode < this->episodes );
     }
 
@@ -139,7 +141,6 @@ namespace cleaner{
                     }
 
                     for (int j = 0; j < teta.size() ; ++j) {
-                        std::cout << "teta[i] = " << this->teta[j] << std::endl;
 
                     }
 

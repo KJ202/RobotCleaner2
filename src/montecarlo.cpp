@@ -8,18 +8,20 @@ namespace cleaner{
     montecarlo::~montecarlo(){
     }
 
-    void montecarlo::plots(){
-      std::cout << this->getValueAt(0) << std::endl;
-  }
+    double montecarlo::plots(){
+      //std::cout << this->getValueAt(0) << std::endl;
+      return this->getValueAt(0);
+    }
 
-    void montecarlo::solve(){
+    std::vector<double> montecarlo::solve(){
       this->init();
+      std::vector<double> mc_plot;
 
       do{
         this->setEpisode();
         this->backup();
 
-        this->plots();
+      mc_plot.push_back(this->plots());
       }while( ++this->cepisode < this->episodes );
     }
 

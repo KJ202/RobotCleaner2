@@ -1,26 +1,27 @@
 #include "../include/state.hpp"
+#include "../include/world.hpp"#include "../include/state.hpp"
 #include "../include/world.hpp"
 
 namespace cleaner{
-  state::state(std::vector<bool>const grid, bool base, size battery, size pose, size width, size height): grid(grid), base(base), battery(battery), pose(pose), width(width),height(height){}
+    state::state(std::vector<bool>const grid, bool base, size battery, size pose, size width, size height, int nbf): grid(grid), base(base), battery(battery), pose(pose), width(width),height(height),NBF(nbf){}
 
-  state::~state(){}
+    state::~state(){}
 
-  std::vector<bool>const& state::getGrid() const{
-    return grid;
-  }
+    std::vector<bool>const& state::getGrid() const{
+        return grid;
+    }
 
-  bool state::getBase() const{
-    return base;
-  }
+    bool state::getBase() const{
+        return base;
+    }
 
-  size state::getBattery() const{
-    return battery;
-  }
+    size state::getBattery() const{
+        return battery;
+    }
 
-  size state::getPose() const{
-    return pose;
-  }
+    size state::getPose() const{
+        return pose;
+    }
 
     int state::getDistDirt()const{ //features get distance to closer dirty cell excepting the current cell
         /*find dirt between base and position */
@@ -79,12 +80,13 @@ namespace cleaner{
                 features.push_back((double)battery);
                 features.push_back((double)this->getBaseDistance());
                 features.push_back((double) this->getCurrentDirt());
-                // features.push_back((double)this->getDistDirt());
+                if(NBF == 4)features.push_back((double)this->getDistDirt());
             }
             else{
                 features.push_back(0.0);
                 features.push_back(0.0);
                 features.push_back(0.0);
+                if(NBF == 4)features.push_back(0.0);
 
             }
         }

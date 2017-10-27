@@ -39,13 +39,13 @@ namespace cleaner{
     double getReturn(int i);
     void setEpisode();
     void backup();
-    void plots();
+    double plots();
     void init();
 
   public:
     ~montecarlo();
     montecarlo(world const&, double, double, int);
-    void solve();
+    std::vector<double> solve();
     action greedy(int);
     double getValueAt(int);
   };

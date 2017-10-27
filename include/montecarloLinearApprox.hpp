@@ -21,6 +21,8 @@
 namespace cleaner{
     class montecarloLinearApprox{
     protected:
+
+
         world w;
         double gamma, epsilon, learning_rate=0.01;
         int NBF = 3;//nb features
@@ -43,13 +45,13 @@ namespace cleaner{
         double getReturn(int i);
         void setEpisode();
         void backup();
-        void plots();
+        double plots();
         void init(int);
 
     public:
         ~montecarloLinearApprox();
-        montecarloLinearApprox(world const&, double, double, int);
-        void solve();
+        montecarloLinearApprox(const world &w, double epsilon, double learning_rate, double gamma, int episodes, int nbf);
+        std::vector<double> solve();
         int greedy(int);
         double getValueAt(int);
 
