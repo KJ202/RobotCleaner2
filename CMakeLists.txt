@@ -9,7 +9,6 @@ if(UNIX)
 endif()
 
 #Déclaration de l'exécutable
-
 add_executable(
 
         robot_cleaner2

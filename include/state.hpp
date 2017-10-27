@@ -27,7 +27,7 @@
 namespace cleaner{
   class state{
   protected:
-    int NBF = 3;//nb features
+    int NBF = 4;//nb features
     bool base;
     size battery, pose,height,width;
     std::vector<bool> grid;

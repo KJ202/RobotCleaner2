@@ -5,6 +5,7 @@
 #include "../include/qlearning.hpp"
 #include "../include/qlearningLinearApprox.hpp"
 #include "../include/montecarlo.hpp"
+#include "matplotlibcpp.h"
 
 int main(){
   srand (time(NULL));

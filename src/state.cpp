@@ -79,9 +79,10 @@ namespace cleaner{
             features.push_back((double)battery);
             features.push_back((double)this->getBaseDistance());
             features.push_back((double) this->getCurrentDirt());
-           // features.push_back((double)this->getDistDirt());
+            features.push_back((double)this->getDistDirt());
         }
         else{
+            features.push_back(0.0);
             features.push_back(0.0);
             features.push_back(0.0);
             features.push_back(0.0);
