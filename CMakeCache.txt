@@ -114,7 +114,7 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=RobotCleaner2
+CMAKE_PROJECT_NAME:STATIC=robot_cleaner2
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -179,6 +179,12 @@ RobotCleaner2_BINARY_DIR:STATIC=/home/lilinux/Documents/5TC/RobotCleaner2
 
 //Value Computed by CMake
 RobotCleaner2_SOURCE_DIR:STATIC=/home/lilinux/Documents/5TC/RobotCleaner2
+
+//Value Computed by CMake
+robot_cleaner2_BINARY_DIR:STATIC=/home/lilinux/Documents/5TC/RobotCleaner2
+
+//Value Computed by CMake
+robot_cleaner2_SOURCE_DIR:STATIC=/home/lilinux/Documents/5TC/RobotCleaner2
 
 
 ########################

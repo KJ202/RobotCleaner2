@@ -3,24 +3,23 @@
 
 
 namespace cleaner{
-    qlearningLinearApprox::qlearningLinearApprox(world const& w, double epsilon, double learning_rate, double gamma, int episodes) : w(w), epsilon(epsilon), learning_rate(learning_rate), gamma(gamma), episodes(episodes){
+    qlearningLinearApprox::qlearningLinearApprox(world const& w, double epsilon, double learning_rate, double gamma, int episodes, int nbf) : w(w), epsilon(epsilon), learning_rate(learning_rate), gamma(gamma), episodes(episodes), NBF(nbf){
     }
 
     qlearningLinearApprox::~qlearningLinearApprox(){
     }
 
-    void qlearningLinearApprox::plots(){
-      std::cout << this->getValueAt(0) << std::endl;
-        /*for(int i=0;i < this->teta.size(); ++i){
+    double qlearningLinearApprox::plots(){
+      //std::cout << this->getValueAt(0) << std::endl;
+       return this->getValueAt(0) ;
 
-            std::cout << "teta"<<i<< " " << teta[i] << std::endl;
-        }*/
   }
 
-    void qlearningLinearApprox::solve(){
+    std::vector<double> qlearningLinearApprox::solve(){
       double r;
       int s, a, ss;
       this->init(0);
+        std::vector <double> plotVector;
 
       do{
         s=0;
@@ -33,8 +32,9 @@ namespace cleaner{
           s = ss;
         }
 
-        this->plots();
+        plotVector.push_back(this->plots());
       }while( ++this->episode < this->episodes );
+        return plotVector;
     }
 
     double qlearningLinearApprox::getValueAt(int s){

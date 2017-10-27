@@ -8,14 +8,16 @@ namespace cleaner{
     qlearning::~qlearning(){
     }
 
-    void qlearning::plots(){
-      std::cout << this->getValueAt(0) << std::endl;
+    double qlearning::plots(){
+      //std::cout << this->getValueAt(0) << std::endl;
+      return this->getValueAt(0);
   }
 
-    void qlearning::solve(){
+    std::vector<double> qlearning::solve(){
       double r;
       int s, a, ss;
       this->init();
+      std::vector<double> ql_plot;
 
       do{
         s=0;
@@ -26,8 +28,9 @@ namespace cleaner{
           s = ss;
         }
 
-        this->plots();
+        ql_plot.push_back(this->plots());
       }while( ++this->episode < this->episodes );
+      return ql_plot;
     }
 
     double qlearning::getValueAt(int s){

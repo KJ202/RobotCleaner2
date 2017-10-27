@@ -37,7 +37,7 @@ namespace cleaner{
     do{
       for( pose=0; pose<width*height; ++pose )
         for( battery=0; battery<cbattery; ++battery ){
-          states.push_back( new state(grid, base==pose, battery, pose, width, height) );
+          states.push_back( new state(grid, base==pose, battery, pose, width, height,NBF) );
         }
     } while( (grid = this->next(width * height)).size() != 0 );
   }
@@ -84,7 +84,7 @@ namespace cleaner{
     return grid;
   }
 
-  world::world(size width, size height, size cbattery) : width(width), height(height), cbattery(cbattery){
+  world::world(size width, size height, size cbattery, int nbf) : width(width), height(height), cbattery(cbattery), NBF(nbf){
     this->populate();
   }
 

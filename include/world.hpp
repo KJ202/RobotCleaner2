@@ -32,7 +32,7 @@ namespace cleaner{
   class world{
   protected:
     double proba = 0.1;
-
+    int NBF = 3;
     // width + height of the grid
     size width, height;
 
@@ -61,7 +61,7 @@ namespace cleaner{
 
   public:
       ~world();
-      world(size, size, size);
+      world(size, size, size,int);
 
       // returns the number of states
       int getNumStates() const;

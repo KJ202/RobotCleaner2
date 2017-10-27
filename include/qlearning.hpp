@@ -28,13 +28,13 @@ namespace cleaner{
     std::unordered_map<int, std::unordered_map<int, double>> qf;
 
     void backup(int /*current state*/, int /*action*/, int /*next state*/, double /*reward*/);
-    void plots();
+    double plots();
     void init();
 
   public:
     ~qlearning();
     qlearning(world const&, double, double, double, int);
-    void solve();
+    std::vector<double> solve();
     int greedy(int);
     double getValueAt(int);
   };

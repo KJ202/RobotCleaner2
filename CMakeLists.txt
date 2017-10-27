@@ -2,11 +2,12 @@ cmake_minimum_required(VERSION 2.6)
 
 #Déclaration du projet
 
-project(RobotCleaner2)
+project(robot_cleaner2)
 
 if(UNIX)
     SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -std=c++11")
 endif()
+find_package(PythonLibs 2.7)
 
 #Déclaration de l'exécutable
 add_executable(
@@ -38,3 +39,6 @@ add_executable(
         
         
 )
+
+target_include_directories(robot_cleaner2 PRIVATE ${PYTHON_INCLUDE_DIRS})
+target_link_libraries(robot_cleaner2 ${PYTHON_LIBRARIES})
